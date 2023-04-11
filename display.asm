@@ -89,8 +89,8 @@ erase_character:
     la $a0, character_background   # Replace image_start with the label of the image data in memory
     li $a1, CHAR_WIDTH           
     li $a2, CHAR_HEIGHT 
-    lw $t0, CharX
-    lw $t1, CharY        
+    lw $t0, OldX
+    lw $t1, OldY        
 
     # Call display_image
     jal display_image
@@ -101,6 +101,40 @@ erase_character:
 	
     # Return from the function
     jr $ra
+    
+    
+print_fireball:
 
+    la $a0, erase_fireball   # Replace image_start with the label of the image data in memory
+    li $a1, 11           
+    li $a2, 7
+    lw $t0, fireballX
+    lw $t1, fireballY        
+
+    # Call display_image
+    jal display_image
+    
+    lw $t0, fireballX  # Load the current value of "fireball_x" into register $t0
+    addi $t0, $t0, -1     # Add 1 to the value in $t0
+    sw $t0, fireballX   # Store the updated value back to "fireball_x" in memory
+    
+    la $a0, fireball   # Replace image_start with the label of the image data in memory
+    li $a1, 11           
+    li $a2, 7
+    lw $t0, fireballX
+    lw $t1, fireballY  
+    
+    beq $t0, 0, reset_fireball
+
+    cont:
+    # Call display_image
+    jal display_image
+    
+    j continue
+
+reset_fireball:
+	li $t0, 50
+	sw $t0, fireballX
+	j cont
 
 
