@@ -31,7 +31,7 @@
 # - https://www.youtube.com/watch?v=pKb_9LoX9Ys&ab_channel=AnshAneel
 #
 # Are you OK with us sharing the video with people outside course staff?
-# - yes, and please share this project github link as well!
+# - yes, and please share this project github link as well! (https://github.com/anshaneel/Sorta-Super-Mario)
 #
 # Any additional information that the TA needs to know:
 # - (write here, if any)
