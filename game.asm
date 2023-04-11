@@ -28,7 +28,7 @@
 # 
 #
 # Link to video demonstration for final submission:
-# - (insert YouTube / MyMedia / other URL here). Make sure we can view it!
+# - https://www.youtube.com/watch?v=pKb_9LoX9Ys&ab_channel=AnshAneel
 #
 # Are you OK with us sharing the video with people outside course staff?
 # - yes, and please share this project github link as well!
